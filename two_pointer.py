@@ -55,3 +55,36 @@ def two_sum_sorted(nums, target):
     return False
 
 print(two_sum_sorted(nums, target))
+
+
+'''Another Two-Sum -- count all pairs equal to target'''
+nums = [1, 1, 2, 3, 4, 4, 5]
+target = 6
+
+def count_pairs(nums, target):
+    l, r = 0, len(nums)-1
+    count = 0
+
+    while l < r:
+        s = nums[l] + nums[r]
+
+        if s == target:
+            count += 1
+
+            left_v = nums[l]
+            while l < r and nums[l] == left_v:
+                l +=1
+
+            right_v = nums[r]
+            while l < r and nums[r] == right_v:
+                r -= 1
+
+
+        elif s < target:
+            l += 1
+        else:
+            r -= 1
+
+    return count
+
+print(count_pairs(nums, target))
