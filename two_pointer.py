@@ -88,3 +88,58 @@ def count_pairs(nums, target):
     return count
 
 print(count_pairs(nums, target))
+
+
+'''Two Pointer Problem: Container With Most Water -- '''
+
+heights = [1,8,6,2,5,4,8,3,7]
+# Output: 49
+
+# Minimal / Boundary
+tiny_pair = [1, 1]                  # expected = 1
+
+# Monotonic
+strictly_increasing = [1, 2, 3, 4, 5] # expected = 6
+
+# Tall walls, skinny gap
+tall_ends = [10, 1, 1, 1, 10]        # expected = 40
+
+# Peaks and valleys
+classic_peaks = [1, 8, 6, 2, 5, 4, 8, 3, 7]  # expected = 49
+
+# Tricky pointer decision
+false_tallest = [1, 3, 2, 5, 25, 24, 5]      # expected = 24
+
+# Gotcha case
+zero_inside = [0, 2, 0, 2]           # expected = 4
+
+# Stress / intuition
+alternating_peaks = [1, 100, 1, 100, 1, 100, 1]  # expected = 400
+
+
+def max_area(heights):
+    l, r = 0, len(heights) - 1
+    max_water = 0
+
+    while l < r:
+        area = min(heights[l], heights[r]) * (r - l)
+        if area > max_water:
+            max_water = area
+        elif l<r:
+            if heights[l] < heights[r]:
+                l += 1
+            else:
+                r -= 1
+        else:
+            continue
+
+    return max_water
+
+print(max_area(heights))
+print(max_area(tiny_pair))
+print(max_area(strictly_increasing))
+print(max_area(tall_ends))
+print(max_area(classic_peaks))
+print(max_area(false_tallest))
+print(max_area(zero_inside))
+print(max_area(alternating_peaks))
