@@ -143,3 +143,28 @@ print(max_area(classic_peaks))
 print(max_area(false_tallest))
 print(max_area(zero_inside))
 print(max_area(alternating_peaks))
+
+
+def valid_palindrome_one_delete(s):
+    def is_pal(l, r):
+        while l < r:
+            if s[l] != s[r]:
+                return False
+            l += 1
+            r -= 1
+        return True
+
+    l, r = 0, len(s) - 1
+    while l < r:
+        if s[l] == s[r]:
+            l += 1
+            r -= 1
+        else:
+            # one chance to delete either left or right char
+            return is_pal(l + 1, r) or is_pal(l, r - 1)
+    return True
+
+
+print(valid_palindrome_one_delete("aba"))   # True
+print(valid_palindrome_one_delete("abca"))  # True
+print(valid_palindrome_one_delete("abc"))   # False
