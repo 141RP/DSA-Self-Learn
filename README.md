@@ -6,3 +6,4 @@ Topic 1:
   - is palindrome problem - returns T/F
   - Two Sum problem 1 & 2
   - Area problem!!
+  - Palindrome
