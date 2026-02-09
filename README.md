@@ -4,6 +4,6 @@
 Topic 1:
 - Two pointer (two_pointer.py)
   - is palindrome problem - returns T/F
-  - Two Sum problem 1 & 2
+  - General Two Sum problems
   - Area problem!!
-  - Palindrome
+  - Palindrome problem
