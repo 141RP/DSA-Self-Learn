@@ -13,3 +13,7 @@ Topic 2:
   - Area problem!!
   - Palindrome problem
 
+Topic 3:
+- Stacks
+  - PreFix -> PostFix problem
+

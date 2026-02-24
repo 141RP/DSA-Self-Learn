@@ -1,9 +1,9 @@
 #NOTE: DIGITS WILL ONLY BE SINGLE DIGITS
 #Take the infix expression: 3 * ( 8 + 2 ) - 3 * 4 - ( 1 - 4 )
-    # Prefix: - - * 3 + 8 2 * 3 4 + 1 4
-    # Postfix: 3 8 2 + * 3 4 * - 1 4 + -
+    # PreFix: - - * 3 + 8 2 * 3 4 + 1 4
+    # PostFix: 3 8 2 + * 3 4 * - 1 4 + -
 
-#Using only one stack, conver a Prefix to a Postfix
+#Using only one stack, conver a PreFix to a PostFix
 
 digits = "0123456789"
 operators = "+-*/"
