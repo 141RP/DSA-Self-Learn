@@ -14,6 +14,8 @@ Topic 2:
   - Palindrome problem
 
 Topic 3:
+- Linked lists
+  - counting nodes
 - Stacks
   - PreFix -> PostFix problem
 
