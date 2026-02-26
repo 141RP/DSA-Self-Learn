@@ -16,6 +16,7 @@ Topic 2:
 Topic 3:
 - Linked lists
   - counting nodes
+  - summing values 
 - Stacks
   - PreFix -> PostFix problem
 
